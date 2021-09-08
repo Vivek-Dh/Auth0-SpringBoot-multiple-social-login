@@ -22,4 +22,4 @@ spring:
         provider:
           auth0:
             # trailing slash is important!
-            issuer-uri: https://dev-ggtycsos.us.auth0.com/
+            issuer-uri: {yournamespace}/
