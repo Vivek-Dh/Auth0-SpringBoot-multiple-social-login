@@ -1,10 +1,10 @@
-# Spring Boot 2 Login - MVC
 
-This sample demonstrates:
+# Auth0-SpringBoot-multiple-social-login
+Developer profile cards as part of Hashnode's Auth0 hackathon, built in SpringBoot. [LinkedIn, StackOverflow, Github]
 
-- Adding authentication with Auth0 to a Spring Boot 2 MVC application
-- Accessing profile information of the authenticated user
-- Only allowing authenticated users to access certain resources
+Make sure to update application.yml with your client id and secret and use your custom namespace.
+
+https://vivekdh45.hashnode.dev/auth0-spring-boot-social-login-with-custom-authentication-provider-linkedin-github-stackoverflow
 
 ## Configuration
 
@@ -90,14 +90,5 @@ Auth0 helps you to:
 1. Go to [Auth0](https://auth0.com) and click Sign Up.
 2. Use Google, GitHub or Microsoft Account to login.
 
-## Issue Reporting
 
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
-## Author
-
-[Auth0](https://auth0.com)
-
-## License
-
-This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
