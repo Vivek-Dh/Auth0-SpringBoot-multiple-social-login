@@ -1,0 +1,10 @@
+com/auth0/example/ProfileController.java
+ com.auth0.example.ProfileController
+com/auth0/example/HomeController.java
+ com.auth0.example.HomeController
+com/auth0/example/LogoutHandler.java
+ com.auth0.example.LogoutHandler
+com/auth0/example/SecurityConfig.java
+ com.auth0.example.SecurityConfig
+com/auth0/example/DemoApplication.java
+ com.auth0.example.DemoApplication

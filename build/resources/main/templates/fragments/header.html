@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spring Boot 2 MVC Login Quickstart</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.auth0.com/js/auth0-samples-theme/1.0/css/auth0-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/monokai-sublime.min.css"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            margin-top: 3.8em;
+            font-family: "Roboto" sans-serif;
+        }
+        body .card {
+            position: relative;
+            width: 550px;
+            height: fit-content;
+            background: #6699ff;
+            border: 0.1px solid lightgrey;
+            border-radius: 15px;
+            box-shadow: 1px 4px 10px 4px lightgrey;
+            transition: ease all 1s;
+        }
+        body .card:hover {
+            transform: scale(1.2);
+        }
+        body .card .inner-card {
+            position: relative;
+            margin: 1em;
+            height: 50%;
+        }
+        body .card .inner-card .base-info {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 1.2em;
+            justify-content: space-between;
+            padding: 0.4em;
+            margin-left: 5.5em;
+            padding-right: 1em;
+        }
+        body .card .inner-card .first-hr {
+            height: 0.1px;
+            border: 0.5px solid lightblue;
+            width: 80%;
+            margin-left: 2.8em;
+            margin-top: -2px;
+            color: lightblue;
+        }
+        body .card .inner-card .title {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 3.5em;
+            padding-right: 1em;
+        }
+        body .card .inner-card .title .hp {
+            color: lightblue;
+        }
+        body .card .inner-card .stage-text {
+            position: absolute;
+            z-index: 1;
+            top: 14px;
+            left: 11px;
+            text-transform: uppercase;
+            font-size: 1em;
+        }
+        body .card .inner-card .stage-img {
+            background: lightgrey;
+            position: absolute;
+            top: 24px;
+            left: 10px;
+            border: 1px solid yellow;
+        }
+        body .card .inner-card .main-img {
+            display: block;
+            margin: auto;
+            border: 5px solid darkgreen;
+            box-shadow: 2px 4px 10px -2px;
+        }
+        body .card .inner-card .banner {
+            background: wheat;
+            width: 85%;
+            font-size: 1em;
+            margin-top: 0.5em;
+            margin-left: 2.2em;
+            text-align: center;
+        }
+        body .card .inner-card .main-text {
+            font-size: 1em;
+            padding: 0.2em 2.4em;
+            color: black;
+        }
+        body .card .inner-card .main-text span {
+            color: darkblue;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+        body .card .inner-card .second-hr {
+            width: 94%;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        body .card .inner-card .stats {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        body .card .inner-card .stats .fire-grid {
+            display: grid;
+            grid-template-columns: 70px 70px;
+            grid-template-rows: 70px 70px;
+            place-items: center;
+            margin-left: 0.5em;
+            margin-top: 0.1em;
+        }
+        body .card .inner-card .stats p span {
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+        body .card .inner-card .stats .stats-main {
+            font-size: 1em;
+            margin-left: 0.4em;
+        }
+        body .card .inner-card .stats .stats-num {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 0.4em;
+            padding-right: 0.5em;
+        }
+        body .card .ratings {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1em;
+        }
+        body .card .ratings .container {
+            display: flex;
+            flex-flow: column;
+        }
+        body .card .ratings .container p {
+            font-weight: 2000;
+        }
+        body .card .ratings .container .weakness, body .card .ratings .container .resistance, body .card .ratings .container .retreat {
+            display: flex;
+            justify-content: center;
+        }
+        body .card .ratings .container .weakness img, body .card .ratings .container .resistance img, body .card .ratings .container .retreat img {
+            margin: 0 0.4em 0.2em 0;
+        }
+        body .card .bottom-info {
+            font-size: 0.6em;
+            padding: 0 1em;
+            border: 0.8px solid lightblue;
+            margin: 0.2em 1em;
+        }
+        body .card .tiny-txt {
+            padding: 0 2.2em;
+            font-size: 0.6em;
+        }
+
+    </style>
+</head>
+</html>

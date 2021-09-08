@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+
+<div id="card" class="card" layout:fragment="card">
+    <div class="inner-card">
+        <div class="base-info">
+            <p>Evolves from intern</p>
+            <p>Bullied on Stackoverflow for asking questions</p>
+        </div>
+        <hr class="first-hr"/>
+        <div class="title">
+            <h3>Developer</h3>
+            <h3 class="hp">120 HP</h3>
+        </div>
+        <h6 class="stage-text">lvl 2</h6><img class="main-img" th:src="${profile.get('picture')}"
+                                                alt="Pokemon Main" width="220px" height="auto"/>
+        <div class="banner">
+            <p>Backend engineer. Exp 3.5 years, Scared by : css</p>
+        </div>
+        <div class="main-text">
+            <p><span th:size="10px">Pokemon Power: Procrastination</span> - Will spend an hour on choosing background music to work for 20 minutes. This power
+                can't be used if it has broken something in production.</p>
+        </div>
+        <hr class="second-hr"/>
+        <div class="stats">
+            <div class="fire-grid"><img
+                    src="https://www.macworld.com/wp-content/uploads/2021/03/spotify-logo-100779042-orig-3.jpg?quality=50&strip=all&w=1024"
+                    alt="fire emblem" width="70px" height="50px"/><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png"
+                    alt="fire emblem" width="50px" height="50px"/><img
+                    src="data:image/png;base64,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"
+                    alt="fire emblem" width="50px" height="50px"/><img
+                    src="https://cdn.fastly.picmonkey.com/content4/previews/icons_linkedin/icons_linkedin_19_550.png"
+                    alt="fire emblem" width="50px" height="50px"/></div>
+            <p class="stats-main"><span>Pre-emptive commit</span> Push your sphagetti code asap to avoid fixing merge conflicts </p>
+            <p class="stats-num">100</p>
+        </div>
+        <hr class="second-hr"/>
+        <div class="ratings">
+            <div class="container">
+                <p th:text="${'Name : ' + profile.get('name')}"></p>
+                <p th:if="${github!=null}" th:text="${'Bio : ' + github.get('bio')}"></p>
+                <p th:if="${github!=null}" th:text="${'Location : ' + github.get('location')}"></p>
+                <p th:if="${github!=null}" th:text="${'Company : ' + github.get('company')}"></p>
+                <p th:if="${github!=null}" th:text="${'Repos : ' + github.get('public_repos')}"></p>
+                <a th:if="${github!=null}" th:href="${github.get('html_url')}">Github</a>
+                <p th:if="${so!=null}" th:text="${'Reputation : ' + so.get('reputation')}"></p>
+                <p th:if="${so!=null}" th:text="${'Badges : ' + so.get('badge_counts')}"></p>
+                <a th:if="${so!=null}" th:href="${so.get('link')}">Stackoverflow</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page" layout:fragment="content">
+    <div class="container">
+        <div class="mt-5">
+            <div class="container">
+                <div class="row align-items-center profile-header">
+                    <div class="col-md-2 mb-3">
+                        <img th:src="${profile.get('picture')}" class="rounded-circle img-fluid profile-picture"/>
+                    </div>
+                    <div class="col-md text-center text-md-left">
+                        <h2 th:text="${profile.get('name')}"/>
+                        <p class="lead text-muted" th:text="${profile.get('email')}"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <pre class="rounded"><code class="json" id="profileJsonEl" th:text="${profileJson}"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
